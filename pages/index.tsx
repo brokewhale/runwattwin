@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 
 const App = () => (
-  <div tw='flex justify-center items-center h-screen'>
+  <div tw='flex justify-center items-center h-screen flex-col'>
     <h1>Runway 💬</h1>
     <h1>Oya send money 😒😒😒 </h1>
   </div>
