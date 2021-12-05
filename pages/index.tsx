@@ -1,10 +1,13 @@
 import tw from 'twin.macro'
+// import styles from '../components/Shell.module.css'
 
-const App = () => (
-  <div tw='flex justify-center items-center h-screen flex-col'>
-    <h1>Runway 💬</h1>
-    <h1>Oya send money 😒😒😒 </h1>
-  </div>
-)
+import { Shell } from '../components'
+const App = () => {
+  return (
+    <div>
+      <Shell variant='button' withBg='button' />
+    </div>
+  )
+}
 
 export default App
