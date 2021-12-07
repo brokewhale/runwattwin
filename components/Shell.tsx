@@ -1,12 +1,19 @@
+import * as React from 'react'
 import 'twin.macro'
 import Image from 'next/image'
 import { Navbar } from '.'
-interface ShellProps {
+
+interface IShellProps {
   variant?: 'main' | 'button'
   withBg?: 'main' | 'button' | 'none'
   isSmall?: boolean
 }
-function Shell({ variant, withBg }: ShellProps) {
+
+const Shell: React.FunctionComponent<IShellProps> = ({
+  variant,
+  withBg,
+  children,
+}) => {
   return (
     <div tw='h-screen w-full relative bg-mainBg '>
       <div
@@ -18,6 +25,7 @@ function Shell({ variant, withBg }: ShellProps) {
       {withBg === 'button' && <div className='button__bg'></div>}
 
       <Navbar variant={variant} />
+      <div tw='w-full max-w-[90vw] my-0 mx-auto'>{children}</div>
     </div>
   )
 }

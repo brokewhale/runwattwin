@@ -12,6 +12,7 @@ module.exports = {
         ribbon: '#0047ff',
         mainBg: '#F1EDE9',
         borderGray: '#424242',
+        buttonBlue: '#B6D3FF',
       },
       backgroundImage: {
         sidePattern: "url('/assets/sidePattern.png')",
