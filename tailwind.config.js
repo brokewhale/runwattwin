@@ -18,6 +18,10 @@ module.exports = {
         sidePattern: "url('/assets/sidePattern.png')",
       },
     },
+    screens: {
+      'break-tablet': { max: '1330px' },
+      'break-xsmobile': { max: '500px' },
+    },
   },
   plugins: [],
 }

@@ -25,7 +25,9 @@ const Shell: React.FunctionComponent<IShellProps> = ({
       {withBg === 'button' && <div className='button__bg'></div>}
 
       <Navbar variant={variant} />
-      <div tw='w-full max-w-[90vw] my-0 mx-auto'>{children}</div>
+      <div tw='w-full max-w-[90vw] my-0 mx-auto relative z-[100]'>
+        {children}
+      </div>
     </div>
   )
 }

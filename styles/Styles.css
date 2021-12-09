@@ -10,6 +10,11 @@
   background-repeat: repeat;
   padding-top: 6.1px;
 }
+@media only screen and (max-width: 1024px) {
+  .shell {
+    display: none;
+  }
+}
 
 .main__bg {
   position: absolute;
@@ -21,6 +26,17 @@
   background-position-y: bottom;
   right: 78px;
   background-size: contain;
+}
+
+@media only screen and (max-width: 1330px) {
+  .main__bg {
+    background-image: url('/assets/mainbgmobile.png');
+    right: 0;
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    background-size: contain;
+  }
 }
 
 .button__bg {
