@@ -1,8 +1,9 @@
 import tw from 'twin.macro'
 // import styles from '../components/Shell.module.css'
-
+import Link from 'next/link'
 import { Shell } from '../components'
 import { Arrow } from '../components/icons'
+import { Btn } from '../components/Btn'
 const App = () => {
   return (
     <div>
@@ -15,9 +16,14 @@ const App = () => {
             With our super interactive platform, we literally make the best out
             of your most casual ideas.
           </div>
-          <div tw='w-[250px] h-[85px] text-[18px] leading-6 font-medium flex justify-center items-center gap-5 bg-buttonBlue  rounded-[7.19697px] cursor-pointer break-xsmobile:w-[158px] h-[60px] text-[16px]'>
-            Begin <Arrow />
-          </div>
+
+          <Link href='/idea'>
+            <a>
+              <Btn>
+                Begin <Arrow />
+              </Btn>
+            </a>
+          </Link>
         </div>
       </Shell>
     </div>

@@ -2,6 +2,7 @@ import * as React from 'react'
 import Image from 'next/image'
 import LogoRunway from '../public/assets/svg/Vector.svg'
 import ArrowButton from '../public/assets/svg/ButtonArrow.svg'
+import { useRouter } from 'next/router'
 
 import 'twin.macro'
 
@@ -10,6 +11,8 @@ interface INavbarProps {
 }
 
 const Navbar: React.FunctionComponent<INavbarProps> = props => {
+  const router = useRouter()
+
   return (
     <>
       {props.variant === 'main' ? (
@@ -17,7 +20,11 @@ const Navbar: React.FunctionComponent<INavbarProps> = props => {
           <Image src={LogoRunway} width={160} height={24} />
         </div>
       ) : (
-        <div tw=' pt-[38px] pb-[15px] pr-[6.2188rem] w-full max-w-[90vw] my-0 mx-auto '>
+        <div
+          className='navbar__arrow'
+          tw=' pt-[38px] pb-[15px] pr-[6.2188rem] w-full max-w-[90vw] my-0 mx-auto '
+          onClick={() => router.back()}
+        >
           <Image
             src={ArrowButton}
             width={77.78}
