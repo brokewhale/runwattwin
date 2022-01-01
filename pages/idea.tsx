@@ -1,10 +1,27 @@
 import * as React from 'react'
 import { Shell } from '../components'
 import 'twin.macro'
-
-interface IIdeaProps {}
+import Link from 'next/link'
+import useGlobalState from '../store/global'
+import { useRouter } from 'next/router'
+import { useForm, SubmitHandler } from 'react-hook-form'
+interface IIdeaProps {
+  idea: string
+}
 
 const Idea: React.FunctionComponent<IIdeaProps> = props => {
+  const router = useRouter()
+
+  const { updateUserIdea } = useGlobalState()
+  const { register, handleSubmit } = useForm()
+
+  // const onSubmit = () => {
+
+  // }
+  const onSubmit: SubmitHandler<IIdeaProps> = data => {
+    updateUserIdea(data.idea)
+    router.push('/chat')
+  }
   return (
     <Shell variant='button' withBg='button'>
       <div
@@ -19,20 +36,22 @@ const Idea: React.FunctionComponent<IIdeaProps> = props => {
           you begin the exciting journey of creating an amazing product.
         </div>
 
-        <div tw='max-w-[599px]  w-full'>
+        <form tw='max-w-[599px]  w-full' onSubmit={handleSubmit(onSubmit)}>
           <textarea
-            name='idea'
             id='idea'
-            tw='w-full h-full resize-none max-w-[599px]   max-h-[235px]rounded-[6px] bg-[#FFFFFF] text-[#424242] text-[20px] leading-[150%] placeholder:text-[#B9B9B9] text-[30px] leading-[38px] p-7 mb-5  break-xsmobile:(text-[16px] leading-[150%] placeholder:text-[16px] p-4)'
+            tw='w-full h-full resize-none max-w-[599px] 
+            max-h-[235px]rounded-[6px] bg-[#FFFFFF] text-[#424242] text-[20px] leading-[150%] placeholder:text-[#B9B9B9] 
+            text-[30px] leading-[38px] p-7 mb-5  break-xsmobile:(text-[16px] leading-[150%] placeholder:text-[16px] p-4)'
             placeholder='Input your idea'
+            {...register('idea', { required: true })}
           ></textarea>
 
           <div tw='flex justify-end'>
-            <div tw='w-[141px] h-[64px] text-[18px] leading-6 font-medium flex justify-center items-center gap-5 bg-buttonBlue  rounded-[7.19697px] cursor-pointer break-xsmobile:(w-full h-[60px] text-[16px])'>
+            <button tw='w-[141px] h-[64px] text-[18px] leading-6 font-medium flex justify-center items-center gap-5 bg-buttonBlue  rounded-[7.19697px] cursor-pointer break-xsmobile:(w-full h-[60px] text-[16px])'>
               Hand-in
-            </div>
+            </button>
           </div>
-        </div>
+        </form>
       </div>
     </Shell>
   )

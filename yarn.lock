@@ -2074,6 +2074,11 @@ image-size@1.0.0:
   dependencies:
     queue "6.0.2"
 
+immer@^9.0.7:
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/immer/-/immer-9.0.7.tgz#b6156bd7db55db7abc73fd2fdadf4e579a701075"
+  integrity sha512-KGllzpbamZDvOIxnmJ0jI840g7Oikx58lBPWV0hUh7dtAyZpFqqrBZdKka5GlTwMTZ1Tjc/bKKW4VSFAt6BqMA==
+
 import-cwd@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/import-cwd/-/import-cwd-3.0.0.tgz#20845547718015126ea9b3676b7592fb8bd4cf92"
@@ -3104,6 +3109,11 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-hook-form@^7.22.5:
+  version "7.22.5"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.22.5.tgz#85a135f3c5ae02ccf73096a03fc14b45607e9baa"
+  integrity sha512-Q2zaeQFXdVQ8l3hcywhltH+Nzj4vo50wMVujHDVN/1Xy9IOaSZJwYBXA2CYTpK6rq41fnXviw3jTLb04c7Gu9Q==
+
 react-is@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
@@ -3932,3 +3942,8 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zustand@^3.6.8:
+  version "3.6.8"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.8.tgz#17f24351aa9e1fbf46f3addb0bcb81b05940d79f"
+  integrity sha512-8dqxig1l/o/N4M3DGxhweLVyCvNsd40oU3fXuY4MfqX1notavmjljCnSeTN3FGfYzbo963w4un2ChYsPB/0gKA==

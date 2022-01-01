@@ -7,10 +7,12 @@ interface IShellProps {
   variant?: 'main' | 'button'
   withBg?: 'main' | 'button' | 'none'
   isSmall?: boolean
+  idea?: string
 }
 
 const Shell: React.FunctionComponent<IShellProps> = ({
   variant,
+  idea,
   withBg,
   children,
 }) => {
@@ -24,7 +26,7 @@ const Shell: React.FunctionComponent<IShellProps> = ({
       {withBg === 'main' && <div className='main__bg'></div>}
       {withBg === 'button' && <div className='button__bg'></div>}
 
-      <Navbar variant={variant} />
+      <Navbar variant={variant} idea={idea} />
       <div tw='w-full max-w-[90vw] my-0 mx-auto relative z-[100]'>
         {children}
       </div>

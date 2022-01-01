@@ -8,6 +8,7 @@ import 'twin.macro'
 
 interface INavbarProps {
   variant?: 'main' | 'button'
+  idea?: string
 }
 
 const Navbar: React.FunctionComponent<INavbarProps> = props => {
@@ -20,18 +21,25 @@ const Navbar: React.FunctionComponent<INavbarProps> = props => {
           <Image src={LogoRunway} width={160} height={24} />
         </div>
       ) : (
+        // <div tw=''>
         <div
           className='navbar__arrow'
-          tw=' pt-[38px] pb-[15px] pr-[6.2188rem] w-full max-w-[90vw] my-0 mx-auto '
-          onClick={() => router.back()}
+          tw=' pt-[38px] pb-[15px] pr-[6.2188rem] w-full max-w-[90vw] my-0 mx-auto flex gap-9 justify-start items-center'
         >
           <Image
             src={ArrowButton}
             width={77.78}
             height={77.78}
             className='arrow__style'
+            onClick={() => router.back()}
           />
+          {props.idea && (
+            <div tw='  text-3xl  text-[#424242] font-semibold max-w-[84%] whitespace-nowrap overflow-hidden overflow-ellipsis'>
+              {props.idea ?? ''}
+            </div>
+          )}
         </div>
+        // </div>
       )}
     </>
   )
