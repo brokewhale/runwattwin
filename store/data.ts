@@ -1,8 +1,4 @@
-export const chatSidebarData: {
-  text: string
-  done: boolean
-  opacity: string
-}[] = [
+export const chatSidebarData = [
   {
     text: 'Problems',
     done: false,

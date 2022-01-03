@@ -72,3 +72,38 @@
     padding-top: 21px !important;
   }
 }
+
+.chat-bubble {
+  position: relative;
+}
+
+.chat-bubble ::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: #fdfdfd transparent transparent transparent;
+  border-radius: 5px;
+}
+
+.chat-bubble-user {
+  position: relative;
+}
+.chat-bubble-user ::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -20px;
+  left: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: #4891ff transparent transparent transparent;
+  border-radius: 5px;
+}

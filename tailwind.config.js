@@ -6,6 +6,7 @@ module.exports = {
         sans: ['Source Code Pro', ...defaultTheme.fontFamily.sans],
         fancy: ['Dancing Script'],
         playfair: ['Playfair Display'],
+        lato: ['Lato'],
       },
       colors: {
         electric: '#db00ff',

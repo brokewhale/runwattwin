@@ -36,6 +36,10 @@ export default class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Dancing+Script'
             rel='stylesheet'
           />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Lato'
+            rel='stylesheet'
+          />
         </Head>
         <body>
           <Main />
