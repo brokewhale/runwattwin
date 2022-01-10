@@ -5,6 +5,9 @@ import Link from 'next/link'
 import useGlobalState from '../store/global'
 import { useRouter } from 'next/router'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { signIn, signOut, useSession } from 'next-auth/react'
+import { getCookies, setCookies, removeCookies } from 'cookies-next'
+import { updateCookie } from '../query/queryFunction/signin'
 interface IIdeaProps {
   idea: string
 }
@@ -22,6 +25,21 @@ const Idea: React.FunctionComponent<IIdeaProps> = props => {
     updateUserIdea(data.idea)
     router.push('/chat')
   }
+  const { data: session, status } = useSession()
+  console.log('session', session)
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      console.log('start')
+
+      const res = await fetch('/api/examples/jwt')
+      const json = await res.json()
+      if (json) {
+        console.log(json)
+      }
+    }
+    fetchData()
+  }, [])
   return (
     <Shell variant='button' withBg='button'>
       <div
@@ -51,6 +69,8 @@ const Idea: React.FunctionComponent<IIdeaProps> = props => {
               Hand-in
             </button>
           </div>
+          <div onClick={() => signOut()}>OUT</div>
+          <div onClick={() => setCookies('key', 'value')}>cookie</div>
         </form>
       </div>
     </Shell>
