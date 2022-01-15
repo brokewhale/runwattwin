@@ -64,9 +64,6 @@ const App = ({ providers }: IAppProps) => {
               </div>
             </Btn>
           </a>
-
-          <div onClick={() => signIn()}>IN</div>
-          <div onClick={() => signOut()}>OUT</div>
         </div>
       </Shell>
     </div>
