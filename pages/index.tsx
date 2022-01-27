@@ -59,7 +59,10 @@ const App = ({ providers }: IAppProps) => {
             }}
           >
             <Btn>
-              <div tw='w-full h-full flex justify-center items-center gap-5'>
+              <div
+                tw='w-full h-full flex justify-center items-center gap-5'
+                id='beginBtn'
+              >
                 <GoogleIcon tw='w-[20px] h-[20px]' /> Begin <Arrow />
               </div>
             </Btn>
