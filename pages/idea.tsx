@@ -18,9 +18,6 @@ const Idea: React.FunctionComponent<IIdeaProps> = props => {
   const { updateUserIdea } = useGlobalState()
   const { register, handleSubmit } = useForm()
 
-  // const onSubmit = () => {
-
-  // }
   const onSubmit: SubmitHandler<IIdeaProps> = data => {
     updateUserIdea(data.idea)
     router.push('/chat')
@@ -28,18 +25,6 @@ const Idea: React.FunctionComponent<IIdeaProps> = props => {
   const { data: session, status } = useSession()
   console.log('session', session)
 
-  // React.useEffect(() => {
-  //   const fetchData = async () => {
-  //     console.log('start')
-
-  //     const res = await fetch('/api/examples/jwt')
-  //     const json = await res.json()
-  //     if (json) {
-  //       console.log(json)
-  //     }
-  //   }
-  //   fetchData()
-  // }, [])
   return (
     <Shell variant='button' withBg='button'>
       <div
